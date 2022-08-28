@@ -77,8 +77,8 @@ body{
 .box .title {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-}
+    flex-direction: column;
+    flex-wrap: wrap;}
 
 .box:hover .overlay {
     bottom: 0%;
@@ -86,7 +86,7 @@ body{
 
 .overlay h2 {
     margin-bottom: 10px;
-    color: black;
+    color: white;
 
 }
 
@@ -102,4 +102,10 @@ body{
     left: 0;
     transition: 0.5s;
     background-color: #0e0d0d8c;
+}
+
+.movie_info {
+    display: flex;
+    flex-wrap: wrap;
+
 }
