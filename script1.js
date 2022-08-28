@@ -34,16 +34,16 @@ btn.addEventListener("click", function (e) {
         }
         )
 
-        .showBtn.addEventListener("click", function(show){
+        .showBtn.addEventListener("click", function(){
 
             // console.log(show)
-            body.innerHTML = ""
 
                 fetch( `https://api.tvmaze.com/shows/1?embed[]=seasons&embed[]=cast`)
                 .then(response => response.json())//text --> json
             .then(data=>{
                 console.log(data)
                 for(let i=0; i<data.length;i++){
+                    movie_info.innerHTML ="";
                     const mainDiv = document.createElement("div")
                     mainDiv.classList.add("mainDiv")
 
