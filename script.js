@@ -12,4 +12,15 @@ async function getTheSow(api){
     console.log(data)
 }
 
+function showdata(data){
+    moiveBox.innerHTML = "";
+    data.results.forEach(
+        item =>{
+            // console.log(data.item)
+        }
+    )
+}
+
+
 getTheSow(APIURL)
+
