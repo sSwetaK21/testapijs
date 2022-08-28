@@ -33,6 +33,8 @@ btn.addEventListener("click", function (e) {
 
         }
         )
+        .catch(err=>alert("Invalid Tv Show Name"))
+
 
         .showBtn.addEventListener("click", function(){
 
