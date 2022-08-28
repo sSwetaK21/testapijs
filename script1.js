@@ -20,9 +20,10 @@ btn.addEventListener("click", function (e) {
                           <span class="spanT"> ${data[item]["show"]["genres"]} <span>
                       </div>
                       <h3>Overview:</h3>
-                      <p> 
+                      <p class="para"> 
                       ${data[item]["show"].summary}
                       </p>
+                      <button type="button" class="showMore">Show More</button>
                    </div>`
 
                 movie_info.appendChild(box)
