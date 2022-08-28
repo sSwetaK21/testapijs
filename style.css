@@ -97,6 +97,8 @@ body{
     position: absolute;
     bottom: -100%;
     font-weight: bold;
+    word-break: break-word;
+
     padding: 20px;
     border-radius: 10px 10px 0px 0px;
     left: 0;
