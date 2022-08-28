@@ -2,6 +2,7 @@
 let btn = document.querySelector('.submitBtn')
 let inputData = document.querySelector("#search")
 let movie_info = document.querySelector(".movie_info")
+let showBtn = document.querySelector(".showMore")
 
 btn.addEventListener("click", function (e) {
     // e.preventDefault();
@@ -32,6 +33,29 @@ btn.addEventListener("click", function (e) {
 
         }
         )
+
+        .showBtn.addEventListener("click", function(show){
+
+            // console.log(show)
+            body.innerHTML = ""
+
+                fetch( `https://api.tvmaze.com/shows/1?embed[]=seasons&embed[]=cast`)
+                .then(response => response.json())//text --> json
+            .then(data=>{
+                console.log(data)
+                for(let i=0; i<data.length;i++){
+                    const mainDiv = document.createElement("div")
+                    mainDiv.classList.add("mainDiv")
+
+                    mainDiv.innerHTML= `
+                    <h2 class="detailTitle"> ${data[i]["show"].name}  </h2>
+                    `
+                }
+            })
+
+           
+
+        })
        
 
 })
