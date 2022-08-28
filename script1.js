@@ -6,6 +6,7 @@ let showBtn = document.querySelector(".showMore")
 
 btn.addEventListener("click", function (e) {
     // e.preventDefault();
+    movie_info.innerHTML=""
     fetch(`https://api.tvmaze.com/search/shows?q=${inputData.value}`)
         .then(response => response.json())//text --> json
         .then(data => {
@@ -33,7 +34,7 @@ btn.addEventListener("click", function (e) {
 
         }
         )
-        .catch(err=>alert("Invalid Tv Show Name"))
+        // .catch(err=>alert("Invalid Tv Show Name"))
 
 
         .showBtn.addEventListener("click", function(){
